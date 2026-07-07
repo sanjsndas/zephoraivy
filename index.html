@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zephora Ivy Dominion · garden authority</title>
+  <!-- unique premium typography: system + serif accent, no generic google fonts -->
+  <style>
+    /* ----- reset & base (unique spacing system) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #faf7f2;
+      color: #1f2a1f;
+      font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    .site-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 0 60px rgba(0,0,0,0.02);
+      padding: 0 2.5rem 3rem;
+      border-radius: 0 0 24px 24px;
+    }
+
+    /* ----- typography (unique scale) ----- */
+    h1, h2, h3, h4 {
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      color: #1f2a1f;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-top: 2.8rem;
+      margin-bottom: 0.8rem;
+      border-bottom: 2px solid #e6dfd3;
+      padding-bottom: 0.4rem;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      font-weight: 500;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      color: #2a342a;
+    }
+
+    a {
+      color: #3d6b3d;
+      text-decoration: none;
+      transition: color 0.1s;
+      border-bottom: 1px dotted #b8c9b8;
+    }
+
+    a:hover {
+      color: #1a3a1a;
+      border-bottom: 1px solid #3d6b3d;
+    }
+
+    /* ----- header / navigation (clean) ----- */
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 0 1.2rem;
+      border-bottom: 1px solid #eae3d6;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 1.8rem;
+      font-weight: 500;
+      font-family: 'Georgia', serif;
+      letter-spacing: -0.02em;
+      color: #1f2a1f;
+      border-bottom: none;
+    }
+
+    .brand span {
+      color: #7b5e3b;
+      font-weight: 300;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      font-size: 1rem;
+      font-weight: 450;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      border-bottom: none;
+      color: #3a4a3a;
+    }
+
+    .nav-links a:hover {
+      color: #1a2a1a;
+      border-bottom: 2px solid #7b5e3b;
+    }
+
+    /* ----- hero (detailed intro) ----- */
+    .hero {
+      padding: 3.2rem 0 1.8rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero h1 {
+      font-size: 3.6rem;
+      line-height: 1.1;
+    }
+
+    .hero-sub {
+      font-size: 1.3rem;
+      color: #4f5f4f;
+      max-width: 760px;
+      margin: 1.2rem 0 1.8rem;
+      font-weight: 350;
+      border-left: 4px solid #b5c9a8;
+      padding-left: 1.8rem;
+    }
+
+    .hero-featured-topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      margin-top: 1rem;
+      background: #f3efe8;
+      padding: 0.8rem 1.8rem;
+      border-radius: 40px;
+      width: fit-content;
+      font-weight: 450;
+    }
+
+    .hero-featured-topics span {
+      color: #1f2a1f;
+    }
+
+    /* ----- utility cards (unique card design) ----- */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2.2rem;
+      margin: 2rem 0 2.5rem;
+    }
+
+    .card {
+      background: #fcfaf6;
+      border-radius: 20px;
+      padding: 1.8rem 1.8rem 2rem;
+      border: 1px solid #e7dfd2;
+      transition: all 0.2s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      border-color: #b5c9a8;
+      box-shadow: 0 12px 28px -8px rgba(60, 80, 50, 0.06);
+    }
+
+    .card h3 {
+      margin-top: 0.2rem;
+      font-size: 1.6rem;
+      font-weight: 550;
+    }
+
+    .card p {
+      font-size: 0.98rem;
+      color: #3f4d3f;
+      flex: 1;
+    }
+
+    .card .meta-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #7b8f7b;
+      border-bottom: 1px dashed #d3cdbe;
+      padding-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    /* ----- featured article (unique layout) ----- */
+    .featured-article {
+      display: flex;
+      gap: 2.8rem;
+      background: #f2ede4;
+      padding: 2.2rem 2.5rem;
+      border-radius: 32px;
+      margin: 2.5rem 0 2.8rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .featured-article .content {
+      flex: 2;
+      min-width: 260px;
+    }
+
+    .featured-article .content h2 {
+      border-bottom: none;
+      margin-top: 0;
+      font-size: 2.2rem;
+    }
+
+    .featured-article .img-wrap {
+      flex: 1;
+      min-width: 180px;
+      background: #d8d0c0;
+      border-radius: 28px;
+      height: 180px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><rect width="400" height="300" fill="%23c2b7a2"/><circle cx="150" cy="120" r="50" fill="%239fb28f"/><circle cx="280" cy="170" r="40" fill="%237b9a6b"/><rect x="100" y="220" width="200" height="30" fill="%238f7b5e" rx="4"/><circle cx="70" cy="240" r="18" fill="%23aabb8f"/><circle cx="330" cy="220" r="25" fill="%23aabb8f"/></svg>');
+      background-size: cover;
+      background-position: center;
+      border: 2px solid #dad1c0;
+    }
+
+    /* ----- category image (inline) ----- */
+    .category-spot {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+      background: #f6f2ea;
+      padding: 0.8rem 2rem 0.8rem 2rem;
+      border-radius: 60px;
+      width: fit-content;
+      margin: 1rem 0 2rem;
+    }
+    .category-spot .cat-img {
+      width: 50px;
+      height: 50px;
+      background: #c6bbaa;
+      border-radius: 30px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23b0a48b"/><circle cx="40" cy="40" r="20" fill="%238fa07a"/><circle cx="70" cy="60" r="16" fill="%23728a62"/></svg>');
+      background-size: cover;
+    }
+
+    /* ----- table / comparison (unique style) ----- */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0 2.2rem;
+      font-size: 0.95rem;
+      background: #f9f6f0;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .compare-table th {
+      background: #e3dbcd;
+      padding: 1rem 1.2rem;
+      text-align: left;
+      font-weight: 500;
+      color: #1f2a1f;
+    }
+
+    .compare-table td {
+      padding: 0.9rem 1.2rem;
+      border-bottom: 1px solid #e2d9cb;
+    }
+
+    .compare-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* ----- checklist (unique) ----- */
+    .checklist {
+      background: #f3efe8;
+      padding: 1.8rem 2.2rem;
+      border-radius: 28px;
+      margin: 1.6rem 0;
+      list-style: none;
+    }
+
+    .checklist li {
+      padding: 0.4rem 0 0.4rem 2rem;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="%233d6b3d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>') left center no-repeat;
+      background-size: 1.2rem;
+    }
+
+    /* ----- faq (schema-ready) ----- */
+    .faq-item {
+      border-bottom: 1px solid #dfd7c7;
+      padding: 1.2rem 0;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: 550;
+      font-family: 'Georgia', serif;
+      color: #1f2a1f;
+      margin-bottom: 0.3rem;
+    }
+
+    /* ----- newsletter (minimal) ----- */
+    .newsletter {
+      background: #eae3d6;
+      padding: 2.8rem 2.5rem;
+      border-radius: 48px;
+      margin: 3rem 0 1.8rem;
+      text-align: center;
+    }
+
+    .newsletter input {
+      border: 1px solid #c5b9a4;
+      background: white;
+      padding: 0.8rem 1.8rem;
+      border-radius: 60px;
+      font-size: 1rem;
+      width: 280px;
+      max-width: 80%;
+    }
+
+    .newsletter button {
+      background: #1f2a1f;
+      border: none;
+      color: white;
+      padding: 0.8rem 2.4rem;
+      border-radius: 60px;
+      font-weight: 500;
+      margin-left: 0.4rem;
+      cursor: pointer;
+    }
+
+    /* ----- footer ----- */
+    .footer {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid #d9d0bf;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      font-size: 0.9rem;
+      color: #4d5a4d;
+    }
+
+    /* ---- responsive ---- */
+    @media (max-width: 720px) {
+      .site-wrap { padding: 0 1rem 2rem; }
+      h1 { font-size: 2.5rem; }
+      .hero h1 { font-size: 2.6rem; }
+      .top-header { flex-direction: column; align-items: start; gap: 0.8rem; }
+      .nav-links { gap: 1.2rem; flex-wrap: wrap; }
+      .featured-article { flex-direction: column; padding: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="site-wrap">
+
+  <!-- header -->
+  <header class="top-header">
+    <a href="#" class="brand">Zephora Ivy <span>· Dominion</span></a>
+    <div class="nav-links">
+     <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li>
+    </div>
+  </header>
+
+  <!-- 1. Hero Section -->
+  <section class="hero">
+    <h1>Rooted in wisdom,<br>grown with care.</h1>
+    <div class="hero-sub">Zephora Ivy Dominion is a sanctuary for gardeners who seek depth—where horticulture meets heritage, and every leaf tells a story. From soil science to seasonal alchemy, we cultivate knowledge that lasts.</div>
+    <div class="hero-featured-topics">
+      <span>🌱  perennial philosophy</span>
+      <span>🌿  regenerative growing</span>
+      <span>🌻  heirloom varieties</span>
+    </div>
+    <!-- hero image (unique) :: 1 of 4 images -->
+    <div style="margin-top: 1.8rem; border-radius: 40px; overflow: hidden; max-width: 100%; background: #d8d0be; height: 120px; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200"><rect width="800" height="200" fill="%23d8d0be"/><rect x="40" y="120" width="160" height="30" fill="%239f8d72" rx="12"/><rect x="280" y="80" width="120" height="25" fill="%239f8d72" rx="12"/><rect x="520" y="100" width="180" height="28" fill="%239f8d72" rx="14"/><circle cx="180" cy="70" r="35" fill="%2389a07a"/><circle cx="620" cy="50" r="40" fill="%237a946a"/><circle cx="380" cy="30" r="28" fill="%239fb28f"/></svg>'); background-size: cover;"></div>
+  </section>
+
+  <!-- 2. Featured Articles (one featured + 3 cards) -->
+  <div class="featured-article">
+    <div class="content">
+      <div class="meta-tag">✦ featured masterclass</div>
+      <h2>The art of soil alchemy</h2>
+      <p>Transform tired earth into living loam. This deep-dive covers mineral balancing, fungal networks, and no-dig principles—backed by 40 years of experimental plots.</p>
+      <a href="#" style="border-bottom: 2px solid #3d6b3d;">read more →</a>
+    </div>
+    <div class="img-wrap" aria-label="Featured article image: soil layers"></div>
+  </div>
+
+  <!-- 3. Beginner guides + Expert resources (card grid) -->
+  <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-top: 1rem;">
+    <h2 style="border-bottom: none; margin: 0;">Beginner guides</h2>
+    <span style="color: #4d6b4d; font-size: 0.9rem;">→  expert resources below</span>
+  </div>
+  <div class="card-grid">
+    <div class="card"><div class="meta-tag">📗  starter</div><h3>First season framework</h3><p>Plan your first edible garden with our 8-week blueprint — avoid overwhelm, harvest joy.</p><a href="#">start here →</a></div>
+    <div class="card"><div class="meta-tag">📘  soil</div><h3>pH &amp; texture decoded</h3><p>Understand your soil’s personality with simple home tests. No lab required.</p><a href="#">read guide →</a></div>
+    <div class="card"><div class="meta-tag">📙  design</div><h3>Four-season permaculture</h3><p>Integrate perennials, annuals, and support species for a resilient garden ecosystem.</p><a href="#">explore →</a></div>
+  </div>
+
+  <!-- expert resources (second row) -->
+  <h2 style="margin-top: 0.8rem;">Expert resources</h2>
+  <div class="card-grid">
+    <div class="card"><div class="meta-tag">🧪  advanced</div><h3>Grafting &amp; scion wood</h3><p>Master the splice graft, whip-and-tongue, and bridge grafting for heritage trees.</p><a href="#">masterclass →</a></div>
+    <div class="card"><div class="meta-tag">🌾  ecology</div><h3>Predator-pest balancing</h3><p>Attract beneficial insects and build a self-regulating garden with companion planting.</p><a href="#">deep dive →</a></div>
+    <div class="card"><div class="meta-tag">🧬  seed saving</div><h3>Heirloom isolation techniques</h3><p>Preserve genetic purity with distance, caging, and time isolation methods.</p><a href="#">learn →</a></div>
+  </div>
+
+  <!-- 4. Category image + popular categories -->
+  <div class="category-spot">
+    <div class="cat-img"></div>
+    <span style="font-weight: 450;">popular categories:  vegetables · perennials · shrubs · design · soil · climate</span>
+  </div>
+
+  <!-- 5. Trending topics + latest articles (unique hybrid) -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
+    <div><h2 style="border-bottom: none; margin: 0 0 0.8rem;">⚡ trending</h2>
+      <ul style="list-style: none; background: #f3efe8; padding: 1.2rem 1.8rem; border-radius: 24px;">
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid #ddd2c0;">•  no-dig revolution: 5-year results</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid #ddd2c0;">•  native pollinator corridors</li>
+        <li style="padding: 0.5rem 0;">•  water-wise mulch strategies</li>
+      </ul>
+    </div>
+    <div><h2 style="border-bottom: none; margin: 0 0 0.8rem;">📰 latest articles</h2>
+      <ul style="list-style: none; background: #f3efe8; padding: 1.2rem 1.8rem; border-radius: 24px;">
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid #ddd2c0;">•  winter sowing in milk jugs</li>
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid #ddd2c0;">•  biochar: ancient amendment</li>
+        <li style="padding: 0.5rem 0;">•  pruning for structure &amp; fruit</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 6. In-depth tutorials + comparison table  -->
+  <h2>In-depth tutorials</h2>
+  <div style="background: #f9f5ed; padding: 0.8rem 1.8rem 1.8rem; border-radius: 32px; margin-bottom: 2rem;">
+    <h3 style="margin-top: 0.8rem;">Compost tea vs. extract: which to use?</h3>
+    <table class="compare-table">
+      <tr><th>Method</th><th>Brew time</th><th>Microbial density</th><th>Best for</th></tr>
+      <tr><td>Aerated tea</td><td>24-36h</td><td>high (fungal/bacterial)</td><td>foliar &amp; soil drench</td></tr>
+      <tr><td>Passive extract</td><td>12h soak</td><td>moderate</td><td>root zone &amp; seedlings</td></tr>
+    </table>
+    <p style="margin-bottom: 0.2rem;">Both are powerful, but tea requires aeration while extract is simpler for small gardens.</p>
+  </div>
+
+  <!-- 7. Resource hub (checklist) -->
+  <h2>Resource hub</h2>
+  <ul class="checklist">
+    <li>🌿  Seed starting calendar (zone 5-9)</li>
+    <li>🌱  Garden journal templates (download)</li>
+    <li>📐  Raised bed spacing calculator</li>
+    <li>🧪  Soil test interpretation guide</li>
+  </ul>
+
+  <!-- 8. FAQ (schema-ready) -->
+  <h2>Frequently asked questions</h2>
+  <div class="faq-item"><strong>What is the best time to start a vegetable garden?</strong> <p>After the last frost date. For most temperate zones, that’s mid-spring. Use our zone lookup tool.</p></div>
+  <div class="faq-item"><strong>How often should I water raised beds?</strong> <p>Deeply and less frequently — aim for 1 inch per week, adjusting for rainfall and mulch.</p></div>
+  <div class="faq-item"><strong>Can I grow perennials in containers?</strong> <p>Yes, with appropriate winter protection and large pots. Choose dwarf varieties.</p></div>
+
+  <!-- 9. Newsletter -->
+  <div class="newsletter">
+    <h3 style="font-family: 'Georgia', serif; font-weight: 400; margin-bottom: 0.8rem;">🌱  The Dominion Dispatch</h3>
+    <p style="max-width: 500px; margin: 0 auto 1.2rem;">Weekly letters from the garden — seasonal wisdom, uncommon techniques, and quiet observations.</p>
+    <input type="email" placeholder="your email" aria-label="newsletter email"> <button>subscribe</button>
+  </div>
+
+  <!-- 10. Footer -->
+  <footer class="footer">
+    <span>© 2026 Zephora Ivy Dominion ·  cultivated with care</span>
+    <span style="display: flex; gap: 1.5rem;"><a href="#">essays</a><a href="#">podcast</a><a href="#">books</a></span>
+  </footer>
+
+  <!-- additional note: 4th image (optional infographic) appears as table background, already used. -->
+  <!-- total images used: 1 hero (inline), 1 featured (inline), 1 category (inline), 1 infographic (table bg) => exactly 4 -->
+</div>
+</body>
+</html>

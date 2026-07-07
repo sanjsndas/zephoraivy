@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About · Zephora Ivy Dominion</title>
+  <style>
+    /* ----- reset & base (mirroring unique spacing system) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #faf7f2;
+      color: #1f2a1f;
+      font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    .site-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 0 60px rgba(0,0,0,0.02);
+      padding: 0 2.5rem 3rem;
+      border-radius: 0 0 24px 24px;
+    }
+
+    /* ----- typography (unique scale) ----- */
+    h1, h2, h3, h4 {
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      color: #1f2a1f;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-top: 2.8rem;
+      margin-bottom: 0.8rem;
+      border-bottom: 2px solid #e6dfd3;
+      padding-bottom: 0.4rem;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      font-weight: 500;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      color: #2a342a;
+    }
+
+    a {
+      color: #3d6b3d;
+      text-decoration: none;
+      transition: color 0.1s;
+      border-bottom: 1px dotted #b8c9b8;
+    }
+
+    a:hover {
+      color: #1a3a1a;
+      border-bottom: 1px solid #3d6b3d;
+    }
+
+    /* ----- header / navigation (clean) ----- */
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 0 1.2rem;
+      border-bottom: 1px solid #eae3d6;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 1.8rem;
+      font-weight: 500;
+      font-family: 'Georgia', serif;
+      letter-spacing: -0.02em;
+      color: #1f2a1f;
+      border-bottom: none;
+    }
+
+    .brand span {
+      color: #7b5e3b;
+      font-weight: 300;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      font-size: 1rem;
+      font-weight: 450;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      border-bottom: none;
+      color: #3a4a3a;
+    }
+
+    .nav-links a:hover {
+      color: #1a2a1a;
+      border-bottom: 2px solid #7b5e3b;
+    }
+
+    /* ----- about hero (unique) ----- */
+    .about-hero {
+      padding: 2.2rem 0 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .about-hero h1 {
+      font-size: 3.4rem;
+      line-height: 1.1;
+    }
+
+    .about-sub {
+      font-size: 1.3rem;
+      color: #4f5f4f;
+      max-width: 760px;
+      margin: 1.2rem 0 1.8rem;
+      font-weight: 350;
+      border-left: 4px solid #b5c9a8;
+      padding-left: 1.8rem;
+    }
+
+    /* ----- values / mission (card-like) ----- */
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin: 2.5rem 0;
+    }
+
+    .mission-item {
+      background: #fcfaf6;
+      border-radius: 28px;
+      padding: 1.8rem 1.8rem 2rem;
+      border: 1px solid #e7dfd2;
+      transition: all 0.2s;
+    }
+
+    .mission-item:hover {
+      border-color: #b5c9a8;
+      box-shadow: 0 12px 28px -8px rgba(60, 80, 50, 0.06);
+    }
+
+    .mission-item h3 {
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+
+    /* ----- story section (with inline image) ----- */
+    .story-wrap {
+      display: flex;
+      gap: 2.8rem;
+      background: #f2ede4;
+      padding: 2.2rem 2.5rem;
+      border-radius: 32px;
+      margin: 2rem 0 2.8rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .story-wrap .story-content {
+      flex: 2;
+      min-width: 260px;
+    }
+
+    .story-wrap .story-content h2 {
+      border-bottom: none;
+      margin-top: 0;
+      font-size: 2.2rem;
+    }
+
+    .story-img {
+      flex: 1;
+      min-width: 180px;
+      background: #d8d0c0;
+      border-radius: 28px;
+      height: 200px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><rect width="400" height="300" fill="%23c2b7a2"/><circle cx="120" cy="140" r="60" fill="%239fb28f"/><circle cx="280" cy="160" r="45" fill="%237b9a6b"/><rect x="90" y="230" width="220" height="30" fill="%238f7b5e" rx="6"/><circle cx="60" cy="250" r="22" fill="%23aabb8f"/><circle cx="340" cy="230" r="28" fill="%23aabb8f"/></svg>');
+      background-size: cover;
+      background-position: center;
+      border: 2px solid #dad1c0;
+    }
+
+    /* ----- team (unique) ----- */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 1.5rem 0 2.5rem;
+    }
+
+    .team-card {
+      background: #f9f6f0;
+      border-radius: 30px;
+      padding: 1.5rem 1.2rem;
+      text-align: center;
+      border: 1px solid #e1d8c8;
+    }
+
+    .team-card .avatar {
+      width: 80px;
+      height: 80px;
+      background: #c6bbaa;
+      border-radius: 40px;
+      margin: 0 auto 0.8rem;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23b0a48b"/><circle cx="50" cy="35" r="22" fill="%238fa07a"/><circle cx="30" cy="75" r="18" fill="%23728a62"/><circle cx="70" cy="75" r="18" fill="%23728a62"/></svg>');
+      background-size: cover;
+    }
+
+    .team-card h4 {
+      font-size: 1.3rem;
+      margin-bottom: 0.2rem;
+    }
+
+    /* ----- timeline (unique) ----- */
+    .timeline {
+      background: #f3efe8;
+      padding: 1.8rem 2.2rem;
+      border-radius: 28px;
+      margin: 2rem 0;
+      list-style: none;
+    }
+
+    .timeline li {
+      padding: 0.7rem 0 0.7rem 2.2rem;
+      border-bottom: 1px solid #ddd2c0;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%233d6b3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>') left center no-repeat;
+      background-size: 1.4rem;
+    }
+
+    .timeline li:last-child {
+      border-bottom: none;
+    }
+
+    /* ----- newsletter (minimal) ----- */
+    .newsletter {
+      background: #eae3d6;
+      padding: 2.8rem 2.5rem;
+      border-radius: 48px;
+      margin: 3rem 0 1.8rem;
+      text-align: center;
+    }
+
+    .newsletter input {
+      border: 1px solid #c5b9a4;
+      background: white;
+      padding: 0.8rem 1.8rem;
+      border-radius: 60px;
+      font-size: 1rem;
+      width: 280px;
+      max-width: 80%;
+    }
+
+    .newsletter button {
+      background: #1f2a1f;
+      border: none;
+      color: white;
+      padding: 0.8rem 2.4rem;
+      border-radius: 60px;
+      font-weight: 500;
+      margin-left: 0.4rem;
+      cursor: pointer;
+    }
+
+    /* ----- footer ----- */
+    .footer {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid #d9d0bf;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      font-size: 0.9rem;
+      color: #4d5a4d;
+    }
+
+    /* ---- responsive ---- */
+    @media (max-width: 720px) {
+      .site-wrap { padding: 0 1rem 2rem; }
+      h1 { font-size: 2.5rem; }
+      .about-hero h1 { font-size: 2.6rem; }
+      .top-header { flex-direction: column; align-items: start; gap: 0.8rem; }
+      .nav-links { gap: 1.2rem; flex-wrap: wrap; }
+      .story-wrap { flex-direction: column; padding: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="site-wrap">
+
+  <!-- header (identical to homepage) -->
+  <header class="top-header">
+    <a href="#" class="brand">Zephora Ivy <span>· Dominion</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html" style="border-bottom: 2px solid #7b5e3b;">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms Of Privacy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookies Policy</a>
+    </div>
+  </header>
+
+  <!-- about hero -->
+  <section class="about-hero">
+    <h1>Grounded in history,<br>growing toward tomorrow.</h1>
+    <div class="about-sub">Zephora Ivy Dominion is more than a garden resource — it is a living archive of horticultural wisdom, regenerative practice, and quiet reverence for the natural world. We are keepers of heirloom knowledge and advocates for the soil.</div>
+    <!-- decorative inline image (second) -->
+    <div style="margin-top: 1.8rem; border-radius: 40px; overflow: hidden; max-width: 100%; background: #d8d0be; height: 110px; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200"><rect width="800" height="200" fill="%23d8d0be"/><rect x="30" y="130" width="200" height="24" fill="%239f8d72" rx="12"/><rect x="300" y="90" width="140" height="26" fill="%239f8d72" rx="12"/><rect x="540" y="110" width="200" height="30" fill="%239f8d72" rx="14"/><circle cx="160" cy="70" r="38" fill="%2389a07a"/><circle cx="660" cy="55" r="42" fill="%237a946a"/><circle cx="400" cy="35" r="30" fill="%239fb28f"/></svg>'); background-size: cover;"></div>
+  </section>
+
+  <!-- mission & values -->
+  <h2>Our mission</h2>
+  <div class="mission-grid">
+    <div class="mission-item"><h3>🌱  Cultivate</h3><p>We grow knowledge through hands-on experiments, heirloom trials, and deep observation — always with respect for the land.</p></div>
+    <div class="mission-item"><h3>📖  Preserve</h3><p>We document forgotten techniques, local ecotypes, and the stories embedded in every seed and cutting.</p></div>
+    <div class="mission-item"><h3>🤝  Connect</h3><p>We build bridges between gardeners, farmers, and botanists, fostering a community of shared wisdom.</p></div>
+  </div>
+
+  <!-- story section with image -->
+  <div class="story-wrap">
+    <div class="story-content">
+      <h2>The Dominion story</h2>
+      <p>Founded in 2018 by a collective of horticulturists and ecologists, Zephora Ivy Dominion began as a small research plot in the foothills. Today, we curate a global network of trial gardens, seed exchanges, and educational content — all rooted in the belief that gardening is an act of radical hope.</p>
+      <p>Our name honors the ivy that climbs through ruins and the zephyr winds that carry pollen across continents. We are gardeners, storytellers, and stewards.</p>
+      <a href="#" style="border-bottom: 2px solid #3d6b3d;">read our full manifesto →</a>
+    </div>
+    <div class="story-img" aria-label="story image: garden and hands"></div>
+  </div>
+
+  <!-- team (unique) -->
+  <h2>Our core team</h2>
+  <div class="team-grid">
+    <div class="team-card"><div class="avatar"></div><h4>Elara Thorne</h4><p style="font-size:0.9rem; color:#4d5a4d;">Head of soil ecology</p></div>
+    <div class="team-card"><div class="avatar"></div><h4>Milo Voss</h4><p style="font-size:0.9rem; color:#4d5a4d;">Heritage seed curator</p></div>
+    <div class="team-card"><div class="avatar"></div><h4>Dr. Iris Park</h4><p style="font-size:0.9rem; color:#4d5a4d;">Plant physiologist</p></div>
+    <div class="team-card"><div class="avatar"></div><h4>Ronan Grey</h4><p style="font-size:0.9rem; color:#4d5a4d;">Permaculture designer</p></div>
+  </div>
+
+  <!-- timeline / milestones -->
+  <h2>Milestones</h2>
+  <ul class="timeline">
+    <li><strong>2018</strong> — first trial garden established with 40 heirloom tomato varieties</li>
+    <li><strong>2020</strong> — launched the Dominion Dispatch newsletter (now 12k subscribers)</li>
+    <li><strong>2022</strong> — partnered with regional seed banks to preserve endangered cultivars</li>
+    <li><strong>2025</strong> — opened the Soil Alchemy Lab for community soil testing and education</li>
+  </ul>
+
+  <!-- philosophy / unique approach -->
+  <h2>Our philosophy</h2>
+  <div style="background: #f9f5ed; padding: 1.8rem 2.2rem; border-radius: 32px; margin: 1.5rem 0;">
+    <p style="font-size:1.1rem; font-style: italic; margin-bottom: 0.2rem;">“We do not inherit the earth from our ancestors; we borrow it from our children. Gardening, in its truest form, is a conversation across generations.”</p>
+    <p style="text-align: right; color: #4d5a4d;">— Zephora Ivy Dominion charter</p>
+  </div>
+
+  <!-- newsletter (matching homepage) -->
+  <div class="newsletter">
+    <h3 style="font-family: 'Georgia', serif; font-weight: 400; margin-bottom: 0.8rem;">🌱  The Dominion Dispatch</h3>
+    <p style="max-width: 500px; margin: 0 auto 1.2rem;">Weekly letters from the garden — seasonal wisdom, uncommon techniques, and quiet observations.</p>
+    <input type="email" placeholder="your email" aria-label="newsletter email"> <button>subscribe</button>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <span>© 2026 Zephora Ivy Dominion ·  cultivated with care</span>
+    <span style="display: flex; gap: 1.5rem;"><a href="#">essays</a><a href="#">podcast</a><a href="#">books</a></span>
+  </footer>
+
+</div>
+</body>
+</html>

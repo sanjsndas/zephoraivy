@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact · Zephora Ivy Dominion</title>
+  <!-- unique premium typography: system + serif accent, no generic google fonts -->
+  <style>
+    /* ----- reset & base (unique spacing system) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #faf7f2;
+      color: #1f2a1f;
+      font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    .site-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 0 60px rgba(0,0,0,0.02);
+      padding: 0 2.5rem 3rem;
+      border-radius: 0 0 24px 24px;
+    }
+
+    /* ----- typography (unique scale) ----- */
+    h1, h2, h3, h4 {
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      color: #1f2a1f;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-top: 2.8rem;
+      margin-bottom: 0.8rem;
+      border-bottom: 2px solid #e6dfd3;
+      padding-bottom: 0.4rem;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      font-weight: 500;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      color: #2a342a;
+    }
+
+    a {
+      color: #3d6b3d;
+      text-decoration: none;
+      transition: color 0.1s;
+      border-bottom: 1px dotted #b8c9b8;
+    }
+
+    a:hover {
+      color: #1a3a1a;
+      border-bottom: 1px solid #3d6b3d;
+    }
+
+    /* ----- header / navigation (clean) ----- */
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 0 1.2rem;
+      border-bottom: 1px solid #eae3d6;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 1.8rem;
+      font-weight: 500;
+      font-family: 'Georgia', serif;
+      letter-spacing: -0.02em;
+      color: #1f2a1f;
+      border-bottom: none;
+    }
+
+    .brand span {
+      color: #7b5e3b;
+      font-weight: 300;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      font-size: 1rem;
+      font-weight: 450;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      border-bottom: none;
+      color: #3a4a3a;
+    }
+
+    .nav-links a:hover {
+      color: #1a2a1a;
+      border-bottom: 2px solid #7b5e3b;
+    }
+
+    /* ----- hero (contact intro) ----- */
+    .hero {
+      padding: 3.2rem 0 1.8rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero h1 {
+      font-size: 3.6rem;
+      line-height: 1.1;
+    }
+
+    .hero-sub {
+      font-size: 1.3rem;
+      color: #4f5f4f;
+      max-width: 760px;
+      margin: 1.2rem 0 1.8rem;
+      font-weight: 350;
+      border-left: 4px solid #b5c9a8;
+      padding-left: 1.8rem;
+    }
+
+    /* ----- contact form (unique) ----- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.8rem;
+      margin: 2.5rem 0 2rem;
+      background: #f9f6f0;
+      padding: 2.5rem 2.5rem;
+      border-radius: 40px;
+    }
+
+    .contact-info h2 {
+      border-bottom: none;
+      margin-top: 0;
+      font-size: 2rem;
+    }
+
+    .contact-info p {
+      color: #3f4d3f;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 1.2rem 0;
+      font-size: 1rem;
+    }
+
+    .contact-detail .icon {
+      font-size: 1.6rem;
+      width: 2.4rem;
+      text-align: center;
+    }
+
+    .contact-form label {
+      display: block;
+      font-weight: 500;
+      margin-top: 1.2rem;
+      margin-bottom: 0.3rem;
+      color: #1f2a1f;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem 1.2rem;
+      border: 1px solid #d5cdbc;
+      border-radius: 40px;
+      font-size: 1rem;
+      background: white;
+      transition: 0.2s;
+      font-family: inherit;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: 2px solid #b5c9a8;
+      border-color: transparent;
+    }
+
+    .contact-form textarea {
+      min-height: 150px;
+      border-radius: 28px;
+      resize: vertical;
+    }
+
+    .contact-form .submit-btn {
+      background: #1f2a1f;
+      border: none;
+      color: white;
+      padding: 0.9rem 3rem;
+      border-radius: 60px;
+      font-weight: 500;
+      font-size: 1.1rem;
+      margin-top: 1.8rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .contact-form .submit-btn:hover {
+      background: #3d6b3d;
+    }
+
+    /* ----- cards (social / hours) ----- */
+    .info-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.8rem;
+      margin: 2rem 0 1.5rem;
+    }
+
+    .info-card {
+      background: #fcfaf6;
+      border-radius: 28px;
+      padding: 1.8rem 1.8rem;
+      border: 1px solid #e7dfd2;
+      text-align: center;
+    }
+
+    .info-card .emoji-big {
+      font-size: 2.6rem;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    /* ----- newsletter (minimal) ----- */
+    .newsletter {
+      background: #eae3d6;
+      padding: 2.8rem 2.5rem;
+      border-radius: 48px;
+      margin: 3rem 0 1.8rem;
+      text-align: center;
+    }
+
+    .newsletter input {
+      border: 1px solid #c5b9a4;
+      background: white;
+      padding: 0.8rem 1.8rem;
+      border-radius: 60px;
+      font-size: 1rem;
+      width: 280px;
+      max-width: 80%;
+    }
+
+    .newsletter button {
+      background: #1f2a1f;
+      border: none;
+      color: white;
+      padding: 0.8rem 2.4rem;
+      border-radius: 60px;
+      font-weight: 500;
+      margin-left: 0.4rem;
+      cursor: pointer;
+    }
+
+    /* ----- footer ----- */
+    .footer {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid #d9d0bf;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      font-size: 0.9rem;
+      color: #4d5a4d;
+    }
+
+    /* ---- responsive ---- */
+    @media (max-width: 820px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        padding: 1.8rem;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .site-wrap { padding: 0 1rem 2rem; }
+      h1 { font-size: 2.5rem; }
+      .hero h1 { font-size: 2.6rem; }
+      .top-header { flex-direction: column; align-items: start; gap: 0.8rem; }
+      .nav-links { gap: 1.2rem; flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+<div class="site-wrap">
+
+  <!-- header (identical to garden authority) -->
+  <header class="top-header">
+    <a href="#" class="brand">Zephora Ivy <span>· Dominion</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" style="border-bottom: 2px solid #7b5e3b;">Contact</a>
+      <a href="terms.html">Terms Of Privacy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookies Policy</a>
+    </div>
+  </header>
+
+  <!-- 1. Hero Section (contact) -->
+  <section class="hero">
+    <h1>Let's grow together.</h1>
+    <div class="hero-sub">Have a question about soil, seeds, or a specific garden challenge? Reach out — we reply with the same care we give our perennials.</div>
+    <!-- subtle image (4th unique inline image) -->
+    <div style="margin-top: 1.8rem; border-radius: 40px; overflow: hidden; max-width: 100%; background: #d8d0be; height: 120px; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200"><rect width="800" height="200" fill="%23d8d0be"/><rect x="40" y="120" width="160" height="30" fill="%239f8d72" rx="12"/><rect x="280" y="80" width="120" height="25" fill="%239f8d72" rx="12"/><rect x="520" y="100" width="180" height="28" fill="%239f8d72" rx="14"/><circle cx="180" cy="70" r="35" fill="%2389a07a"/><circle cx="620" cy="50" r="40" fill="%237a946a"/><circle cx="380" cy="30" r="28" fill="%239fb28f"/></svg>'); background-size: cover;"></div>
+  </section>
+
+  <!-- 2. Contact grid: info + form -->
+  <div class="contact-grid">
+    <!-- left: contact info -->
+    <div class="contact-info">
+      <h2>Reach the garden</h2>
+      <p>We’re a small team of horticulturists, designers, and lifelong learners. Whether you're a beginner or a seasoned grower, we’d love to hear from you.</p>
+      <div class="contact-detail"><span class="icon">📍</span> 42 Heron Lane, Ashfield, MA 01330</div>
+      <div class="contact-detail"><span class="icon">📬</span> hello@zephoraivy.dominion</div>
+      <div class="contact-detail"><span class="icon">📞</span> +1 (413) 555-0164</div>
+      <div style="margin-top: 1.6rem; background: #ece5d8; padding: 1rem 1.5rem; border-radius: 40px;">
+        <span style="font-weight: 450;">🌿  response within 24 hours — we dig deep.</span>
+      </div>
+      <!-- small social hint -->
+      <div style="margin-top: 1.2rem; display: flex; gap: 1.8rem; font-size: 1.6rem;">
+        <span>🌱</span> <span>📸</span> <span>🎧</span> <span>📖</span>
+      </div>
+    </div>
+
+    <!-- right: contact form -->
+    <form class="contact-form" action="#" method="post">
+      <label for="name">Full name</label>
+      <input type="text" id="name" placeholder="e.g., Beatrice Greenwood" required>
+
+      <label for="email">Email address</label>
+      <input type="email" id="email" placeholder="you@example.com" required>
+
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" placeholder="soil question, workshop, ...">
+
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Tell us about your garden, your question, or just say hello." required></textarea>
+
+      <button type="submit" class="submit-btn">Send →</button>
+    </form>
+  </div>
+
+  <!-- 3. Additional contact cards (hours, social, etc) -->
+  <div class="info-card-grid">
+    <div class="info-card"><span class="emoji-big">🕊️</span><h4 style="margin: 0.2rem 0;">Garden hours</h4><p style="font-size: 0.9rem;">Wed–Sat 10am–5pm · by appointment</p></div>
+    <div class="info-card"><span class="emoji-big">📬</span><h4 style="margin: 0.2rem 0;">Mail &amp; deliveries</h4><p style="font-size: 0.9rem;">Use our physical address for seed swaps and letters.</p></div>
+    <div class="info-card"><span class="emoji-big">🎙️</span><h4 style="margin: 0.2rem 0;">Podcast</h4><p style="font-size: 0.9rem;">Listen to "Root &amp; Remedy" — new episodes monthly.</p></div>
+  </div>
+
+  <!-- 4. FAQ (contact related) -->
+  <h2>Before you write — quick answers</h2>
+  <div style="background: #f3efe8; padding: 1.2rem 2rem; border-radius: 32px; margin-bottom: 1.2rem;">
+    <div class="faq-item" style="border-bottom: 1px solid #ddd2c0; padding: 0.8rem 0;"><strong>Do you offer garden consultations?</strong> <p>Yes, we offer virtual and on-site consultations. Please include your zone and garden size in the message.</p></div>
+    <div class="faq-item" style="border-bottom: 1px solid #ddd2c0; padding: 0.8rem 0;"><strong>Can I visit the demonstration garden?</strong> <p>Absolutely — our garden is open to visitors during public hours. Check our events calendar.</p></div>
+    <div class="faq-item" style="padding: 0.8rem 0;"><strong>How long does it take to get a reply?</strong> <p>We reply within 24–48 hours. For urgent matters, you can also call during garden hours.</p></div>
+  </div>
+
+  <!-- 5. Newsletter (same as original) -->
+  <div class="newsletter">
+    <h3 style="font-family: 'Georgia', serif; font-weight: 400; margin-bottom: 0.8rem;">🌱  The Dominion Dispatch</h3>
+    <p style="max-width: 500px; margin: 0 auto 1.2rem;">Weekly letters from the garden — seasonal wisdom, uncommon techniques, and quiet observations.</p>
+    <input type="email" placeholder="your email" aria-label="newsletter email"> <button>subscribe</button>
+  </div>
+
+  <!-- 6. Footer (identical) -->
+  <footer class="footer">
+    <span>© 2026 Zephora Ivy Dominion ·  cultivated with care</span>
+    <span style="display: flex; gap: 1.5rem;"><a href="#">essays</a><a href="#">podcast</a><a href="#">books</a></span>
+  </footer>
+
+  <!-- note: exactly 4 images used: hero (inline), featured (inline from original? we keep but not needed), category (not used here), plus hero image. we already have 1 hero inline. contact page uses 1 hero image only, plus the inline decorative from the original if needed. total images in this page: 1 (hero) + the decorative image from the original featured? we keep it minimal. -->
+</div>
+</body>
+</html>

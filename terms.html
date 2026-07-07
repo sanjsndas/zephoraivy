@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms · Zephora Ivy Dominion</title>
+  <style>
+    /* ----- reset & base (mirroring unique spacing system) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #faf7f2;
+      color: #1f2a1f;
+      font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    .site-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 0 60px rgba(0,0,0,0.02);
+      padding: 0 2.5rem 3rem;
+      border-radius: 0 0 24px 24px;
+    }
+
+    /* ----- typography (unique scale) ----- */
+    h1, h2, h3, h4 {
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      color: #1f2a1f;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-top: 2.8rem;
+      margin-bottom: 0.8rem;
+      border-bottom: 2px solid #e6dfd3;
+      padding-bottom: 0.4rem;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      font-weight: 500;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      color: #2a342a;
+    }
+
+    a {
+      color: #3d6b3d;
+      text-decoration: none;
+      transition: color 0.1s;
+      border-bottom: 1px dotted #b8c9b8;
+    }
+
+    a:hover {
+      color: #1a3a1a;
+      border-bottom: 1px solid #3d6b3d;
+    }
+
+    /* ----- header / navigation (clean) ----- */
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 0 1.2rem;
+      border-bottom: 1px solid #eae3d6;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 1.8rem;
+      font-weight: 500;
+      font-family: 'Georgia', serif;
+      letter-spacing: -0.02em;
+      color: #1f2a1f;
+      border-bottom: none;
+    }
+
+    .brand span {
+      color: #7b5e3b;
+      font-weight: 300;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      font-size: 1rem;
+      font-weight: 450;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      border-bottom: none;
+      color: #3a4a3a;
+    }
+
+    .nav-links a:hover {
+      color: #1a2a1a;
+      border-bottom: 2px solid #7b5e3b;
+    }
+
+    /* ----- terms hero (unique) ----- */
+    .terms-hero {
+      padding: 2rem 0 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .terms-hero h1 {
+      font-size: 3.4rem;
+      line-height: 1.1;
+    }
+
+    .terms-sub {
+      font-size: 1.3rem;
+      color: #4f5f4f;
+      max-width: 760px;
+      margin: 1.2rem 0 1.8rem;
+      font-weight: 350;
+      border-left: 4px solid #b5c9a8;
+      padding-left: 1.8rem;
+    }
+
+    /* ----- terms content (card-like sections) ----- */
+    .terms-section {
+      background: #fcfaf6;
+      border-radius: 28px;
+      padding: 1.8rem 2.2rem;
+      margin: 2rem 0;
+      border: 1px solid #e7dfd2;
+      transition: all 0.2s;
+    }
+
+    .terms-section:hover {
+      border-color: #b5c9a8;
+      box-shadow: 0 12px 28px -8px rgba(60, 80, 50, 0.06);
+    }
+
+    .terms-section h2 {
+      border-bottom: none;
+      margin-top: 0;
+      font-size: 1.8rem;
+    }
+
+    .terms-section ul, .terms-section ol {
+      margin-left: 1.8rem;
+      margin-bottom: 1.2rem;
+      color: #2a342a;
+    }
+
+    .terms-section li {
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight-box {
+      background: #f2ede4;
+      padding: 1.8rem 2.2rem;
+      border-radius: 32px;
+      margin: 2rem 0;
+      border-left: 6px solid #7b5e3b;
+    }
+
+    .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ----- newsletter (minimal) ----- */
+    .newsletter {
+      background: #eae3d6;
+      padding: 2.8rem 2.5rem;
+      border-radius: 48px;
+      margin: 3rem 0 1.8rem;
+      text-align: center;
+    }
+
+    .newsletter input {
+      border: 1px solid #c5b9a4;
+      background: white;
+      padding: 0.8rem 1.8rem;
+      border-radius: 60px;
+      font-size: 1rem;
+      width: 280px;
+      max-width: 80%;
+    }
+
+    .newsletter button {
+      background: #1f2a1f;
+      border: none;
+      color: white;
+      padding: 0.8rem 2.4rem;
+      border-radius: 60px;
+      font-weight: 500;
+      margin-left: 0.4rem;
+      cursor: pointer;
+    }
+
+    /* ----- footer ----- */
+    .footer {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid #d9d0bf;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      font-size: 0.9rem;
+      color: #4d5a4d;
+    }
+
+    /* ---- responsive ---- */
+    @media (max-width: 720px) {
+      .site-wrap { padding: 0 1rem 2rem; }
+      h1 { font-size: 2.5rem; }
+      .terms-hero h1 { font-size: 2.6rem; }
+      .top-header { flex-direction: column; align-items: start; gap: 0.8rem; }
+      .nav-links { gap: 1.2rem; flex-wrap: wrap; }
+      .terms-section { padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="site-wrap">
+
+  <!-- header (identical to about page) -->
+  <header class="top-header">
+    <a href="#" class="brand">Zephora Ivy <span>· Dominion</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html" style="border-bottom: 2px solid #7b5e3b;">Terms Of Privacy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookies Policy</a>
+    </div>
+  </header>
+
+  <!-- terms hero -->
+  <section class="terms-hero">
+    <h1>Terms of service<br><span style="font-size: 1.8rem; font-weight: 300; color: #4f5f4f;">&amp; privacy principles</span></h1>
+    <div class="terms-sub">By using the Zephora Ivy Dominion platform, you agree to cultivate a space of mutual respect, clear boundaries, and shared stewardship. These terms are our common ground.</div>
+    <!-- decorative inline image (matching about) -->
+    <div style="margin-top: 1.8rem; border-radius: 40px; overflow: hidden; max-width: 100%; background: #d8d0be; height: 110px; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200"><rect width="800" height="200" fill="%23d8d0be"/><rect x="30" y="130" width="200" height="24" fill="%239f8d72" rx="12"/><rect x="300" y="90" width="140" height="26" fill="%239f8d72" rx="12"/><rect x="540" y="110" width="200" height="30" fill="%239f8d72" rx="14"/><circle cx="160" cy="70" r="38" fill="%2389a07a"/><circle cx="660" cy="55" r="42" fill="%237a946a"/><circle cx="400" cy="35" r="30" fill="%239fb28f"/></svg>'); background-size: cover;"></div>
+  </section>
+
+  <!-- terms sections -->
+  <div class="terms-section">
+    <h2>1. 🌿  Acceptance of terms</h2>
+    <p>By accessing or using any part of the Zephora Ivy Dominion website, you agree to be bound by these Terms of Service. If you do not agree to all the terms, you may not use our services. We reserve the right to update these terms at any time; continued use constitutes acceptance.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>2. 📖  Use of content</h2>
+    <p>All content on this site – including text, images, graphics, and illustrations – is the intellectual property of Zephora Ivy Dominion unless otherwise noted. You are welcome to share and cite our work for non‑commercial purposes, provided you give clear attribution and link back to the original source.</p>
+    <ul>
+      <li><strong>Permitted:</strong> personal use, educational sharing, quoting with credit.</li>
+      <li><strong>Not permitted:</strong> commercial reproduction, resale, or derivative works without explicit permission.</li>
+    </ul>
+  </div>
+
+  <div class="terms-section">
+    <h2>3. 🌱  User contributions & community</h2>
+    <p>We invite comments, stories, and shared wisdom. By submitting content (e.g., via newsletter replies, forum posts, or direct messages), you grant us a non‑exclusive, royalty‑free license to publish, adapt, or archive it, always with proper attribution.</p>
+    <ul>
+      <li>You retain ownership of your original contributions.</li>
+      <li>We reserve the right to remove content that is harmful, commercial spam, or unrelated to horticulture and ecological stewardship.</li>
+    </ul>
+  </div>
+
+  <div class="highlight-box">
+    <h3 style="margin-top: 0; font-size: 1.6rem;">🌳  Privacy at a glance</h3>
+    <p>We collect minimal data: email addresses for newsletters, anonymized analytics, and cookie preferences. We never sell your data. For full details, see our <a href="#" style="border-bottom: 2px solid #3d6b3d;">Privacy Policy</a> and <a href="#" style="border-bottom: 2px solid #3d6b3d;">Cookies Policy</a>.</p>
+    <p style="margin-bottom: 0;">You have the right to access, correct, or delete your personal information at any time by contacting us.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>4. 🔒  Data security</h2>
+    <p>We implement industry‑standard measures to protect your information. However, no method of transmission over the internet is 100% secure. By using our site, you acknowledge this inherent risk.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>5. ⚖️  Limitation of liability</h2>
+    <p>Zephora Ivy Dominion provides educational and inspirational content. We are not liable for any direct, indirect, incidental, or consequential damages arising from your use of our site or reliance on any information provided. Gardening, foraging, and botanical practices should be undertaken with caution and local expertise.</p>
+  </div>
+
+  <div class="terms-section">
+    <h2>6. 📆  Governing law & disputes</h2>
+    <p>These terms are governed by the laws of the state of Oregon, without regard to its conflict of law provisions. Any disputes shall be resolved through good‑faith negotiation, and if necessary, through binding arbitration in accordance with the rules of the American Arbitration Association.</p>
+  </div>
+
+  <div class="terms-section" style="background: #f9f5ed; border-color: #c5b9a4;">
+    <h2>7. ✉️  Contact</h2>
+    <p>If you have questions about these terms or your privacy, please reach out to us at <a href="mailto:hello@zephoraivy.dominion" style="border-bottom: 2px solid #3d6b3d;">hello@zephoraivy.dominion</a> or through our <a href="#" style="border-bottom: 2px solid #3d6b3d;">contact page</a>.</p>
+    <p style="margin-bottom: 0;"><em>Last updated: April 2026</em></p>
+  </div>
+
+  <!-- newsletter (matching homepage) -->
+  <div class="newsletter">
+    <h3 style="font-family: 'Georgia', serif; font-weight: 400; margin-bottom: 0.8rem;">🌱  The Dominion Dispatch</h3>
+    <p style="max-width: 500px; margin: 0 auto 1.2rem;">Weekly letters from the garden — seasonal wisdom, uncommon techniques, and quiet observations.</p>
+    <input type="email" placeholder="your email" aria-label="newsletter email"> <button>subscribe</button>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <span>© 2026 Zephora Ivy Dominion ·  cultivated with care</span>
+    <span style="display: flex; gap: 1.5rem;"><a href="#">essays</a><a href="#">podcast</a><a href="#">books</a></span>
+  </footer>
+
+</div>
+</body>
+</html>
